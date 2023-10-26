@@ -34,8 +34,16 @@ public class SQLConnection {
 
 	@BeforeSuite
 	public void sqlTest1() {
-		System.out.println("hello");
-		launchSQLTests();
+	
+		try {
+			connection = DriverManager.getConnection(url, user, password);
+			System.out.println("Connected to PostgreSQL database successfully!");
+			
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+//		System.out.println("Connected to PostgreSQL database successfully!");
 
 	}
 
