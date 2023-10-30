@@ -41,9 +41,10 @@ public class ExcelCode {
 					int rowNum1 = 0;
 					int column = 0;
 					int cellNum = 0;
+					int num = 0;
 					while (rowIt.hasNext()) {
 						rowIt.next();
-
+                      
 						Row row = sh.getRow(rowNum1);
 
 						rowNum1++;
@@ -52,13 +53,10 @@ public class ExcelCode {
 
 							cellIt.next();
 
-							if (row.getCell(column).getStringCellValue().equalsIgnoreCase("Sub Features")) {
-								while (rowIt.hasNext()) {
-									rowIt.next();
-									
-									System.out.println(row.getCell(cellNum).getStringCellValue());
-									cellNum++;
-								}
+							if (row.getCell(column).getStringCellValue().equalsIgnoreCase("TC_Id")) {
+
+								cellNum = column;
+								System.out.println(cellNum);
 
 							}
 
@@ -67,6 +65,20 @@ public class ExcelCode {
 						}
 
 						column = 0;
+
+						System.out.println(row.getCell(cellNum).getStringCellValue());
+						if (row.getCell(cellNum).getStringCellValue().isBlank()) {
+							
+							System.out.println("Field is Blank");
+							break;
+
+						}
+
+//						else {
+//
+//
+//						}
+
 					}
 
 				}
