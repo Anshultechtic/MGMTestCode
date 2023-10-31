@@ -6,7 +6,7 @@
       <class name="sqlTests.DataBaseTestCases">
         <methods>
           <include name="sqlTest1"/>
-          <include name="tesFormaTable"/>
+          <include name="testRowTable"/>
           <include name="sqlTest2"/>
         </methods>
       </class> <!-- sqlTests.DataBaseTestCases -->
