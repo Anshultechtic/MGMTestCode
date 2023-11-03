@@ -21,7 +21,7 @@ public class DataBaseTestCases extends SQLConnection {
 //
 //			System.out.println("Connected to PostgreSQL database successfully!");
 
-			String tableName = "t-Format";
+			String tableName = "t-Item";
 
 			DatabaseMetaData databaseMetaData = connection.getMetaData();
 
@@ -79,11 +79,17 @@ public class DataBaseTestCases extends SQLConnection {
 
 			if (list.get(i).equals("TG Name") && dataTypeRowIDlist.get(i).equals(20000216)) {
 
-				System.out.println("Passed");
-			}else if(list.get(i).equals("TG") && dataTypeRowIDlist.get(i).equals(20000247)) {
-				
-				System.out.println("Passed");
-				
+				System.out.println("Passed :- <" + list.get(i) + "> has the dataType " + dataTypeRowIDlist.get(i));
+			} else {
+				System.out.println("Failed :- <" + list.get(i) + "> don't have correct DataType");
+			}
+
+			if (list.get(i).equals("TG") && dataTypeRowIDlist.get(i).equals(20000247)) {
+
+				System.out.println("Passed :- <" + list.get(i) + "> has the dataType " + dataTypeRowIDlist.get(i));
+
+			} else {
+				System.out.println("Failed :- <" + list.get(i) + "> don't have correct DataType");
 			}
 
 		}

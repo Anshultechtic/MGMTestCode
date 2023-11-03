@@ -2,20 +2,20 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-10-31T18:45:41 IST" name="Default suite" finished-at="2023-10-31T18:45:41 IST" duration-ms="94">
+  <suite started-at="2023-11-01T17:57:53 IST" name="Default suite" finished-at="2023-11-01T17:57:53 IST" duration-ms="137">
     <groups>
     </groups>
-    <test started-at="2023-10-31T18:45:41 IST" name="Default test" finished-at="2023-10-31T18:45:41 IST" duration-ms="94">
+    <test started-at="2023-11-01T17:57:53 IST" name="Default test" finished-at="2023-11-01T17:57:53 IST" duration-ms="137">
       <class name="sqlTests.DataBaseTestCases">
-        <test-method is-config="true" signature="sqlTest1()[pri:0, instance:sqlTests.DataBaseTestCases@268f106e]" started-at="2023-10-31T18:45:40 IST" name="sqlTest1" finished-at="2023-10-31T18:45:41 IST" duration-ms="409" status="PASS">
+        <test-method is-config="true" signature="sqlTest1()[pri:0, instance:sqlTests.DataBaseTestCases@268f106e]" started-at="2023-11-01T17:57:52 IST" name="sqlTest1" finished-at="2023-11-01T17:57:53 IST" duration-ms="525" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- sqlTest1 -->
-        <test-method signature="testRowTable()[pri:0, instance:sqlTests.DataBaseTestCases@268f106e]" started-at="2023-10-31T18:45:41 IST" name="testRowTable" finished-at="2023-10-31T18:45:41 IST" duration-ms="32" status="PASS">
+        <test-method signature="tesFormaTable()[pri:0, instance:sqlTests.DataBaseTestCases@268f106e]" started-at="2023-11-01T17:57:53 IST" name="tesFormaTable" finished-at="2023-11-01T17:57:53 IST" duration-ms="64" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testRowTable -->
-        <test-method is-config="true" signature="sqlTest2()[pri:0, instance:sqlTests.DataBaseTestCases@268f106e]" started-at="2023-10-31T18:45:41 IST" name="sqlTest2" finished-at="2023-10-31T18:45:41 IST" duration-ms="4" status="PASS">
+        </test-method> <!-- tesFormaTable -->
+        <test-method is-config="true" signature="sqlTest2()[pri:0, instance:sqlTests.DataBaseTestCases@268f106e]" started-at="2023-11-01T17:57:53 IST" name="sqlTest2" finished-at="2023-11-01T17:57:53 IST" duration-ms="3" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- sqlTest2 -->
