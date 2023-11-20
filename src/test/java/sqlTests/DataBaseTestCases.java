@@ -7,6 +7,7 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import baseTest.SQLConnection;
@@ -14,7 +15,7 @@ import baseTest.SQLConnection;
 public class DataBaseTestCases extends SQLConnection {
 
 	@Test
-	public void tesFormaTable() {
+	public void testFormaTable() {
 
 		try {
 //			connection = DriverManager.getConnection(url, user, password);
@@ -22,6 +23,8 @@ public class DataBaseTestCases extends SQLConnection {
 //			System.out.println("Connected to PostgreSQL database successfully!");
 
 			String tableName = "t-Item";
+
+			int num = 0;
 
 			DatabaseMetaData databaseMetaData = connection.getMetaData();
 
@@ -34,14 +37,170 @@ public class DataBaseTestCases extends SQLConnection {
 				String dataType = tableResultSet.getString("TYPE_NAME");
 				int columnSize = tableResultSet.getInt("COLUMN_SIZE");
 				int nullable = tableResultSet.getInt("NULLABLE");
+				if (dataType.equals("int4")) {
+
+					dataType = "Integer";
+
+				}
+				if (dataType.equals("int8")) {
+
+					dataType = "BigInt";
+
+				}
+
+				if (dataType.equals("_int4")) {
+
+					dataType = "Integer[]";
+
+				}
+				if (dataType.equals("_int8")) {
+
+					dataType = "BigInt[]";
+
+				}
 
 				System.out.println("Column Name: " + columnName);
 				System.out.println("Data Type: " + dataType);
 				System.out.println("Column Size: " + columnSize);
 				System.out.println("Nullable: " + (nullable == DatabaseMetaData.columnNullable ? "YES" : "NO"));
+
+				if (columnName.equalsIgnoreCase("Cell")) {
+					Assert.assertEquals(columnName, "Cell");
+					Assert.assertEquals(dataType, "BigInt");
+					Assert.assertEquals(nullable, 1);
+
+					System.out.println(columnName + " has Data type is " + dataType + " and is "
+							+ (nullable == DatabaseMetaData.columnNullable ? "Not Mandatory" : "Mandatory"));
+
+				}
+
+				if (columnName.equalsIgnoreCase("Item")) {
+					Assert.assertEquals(columnName, "Item");
+					Assert.assertEquals(dataType, "BigInt");
+					Assert.assertEquals(nullable, 0);
+					System.out.println(columnName + " has Data type is " + dataType + " and is "
+							+ (nullable == DatabaseMetaData.columnNullable ? "Not Mandatory." : "Mandatory."));
+				}
+
+				if (columnName.equalsIgnoreCase("Inherit")) {
+
+					Assert.assertEquals(columnName, "Inherit");
+					Assert.assertEquals(dataType, "BigInt[]");
+					Assert.assertEquals(nullable, 1);
+					System.out.println(columnName + " has Data type is " + dataType + " and is "
+							+ (nullable == DatabaseMetaData.columnNullable ? "Not Mandatory." : "Mandatory."));
+
+				}
+				if (columnName.equalsIgnoreCase("Data-Type")) {
+					Assert.assertEquals(columnName, "Data-Type");
+					Assert.assertEquals(dataType, "BigInt");
+					Assert.assertEquals(nullable, 0);
+					System.out.println(columnName + " has Data type is " + dataType + " and is "
+							+ (nullable == DatabaseMetaData.columnNullable ? "Not Mandatory." : "Mandatory."));
+
+				}
+
+				if (columnName.equalsIgnoreCase("Data-Range")) {
+					Assert.assertEquals(columnName, "Data-Range");
+					Assert.assertEquals(dataType, "BigInt[]");
+					Assert.assertEquals(nullable, 1);
+
+				}
+
+				if (columnName.equalsIgnoreCase("Row-Data")) {
+					Assert.assertEquals(columnName, "Row-Data");
+					Assert.assertEquals(dataType, "BigInt");
+					Assert.assertEquals(nullable, 1);
+
+				}
+
+				if (columnName.equalsIgnoreCase("Bool-Data")) {
+					Assert.assertEquals(columnName, "Item");
+					Assert.assertEquals(dataType, "BigInt");
+					Assert.assertEquals(nullable, 1);
+
+				}
+
+				if (columnName.equalsIgnoreCase("DateTime-Data")) {
+					Assert.assertEquals(columnName, "DateTime-Data");
+					Assert.assertEquals(dataType, "timestamp");
+					Assert.assertEquals(nullable, 1);
+
+				}
+
+				if (columnName.equalsIgnoreCase("Color-Data")) {
+					Assert.assertEquals(columnName, "Item");
+					Assert.assertEquals(dataType, "Integer");
+					Assert.assertEquals(nullable, 1);
+
+				}
+
+				if (columnName.equalsIgnoreCase("Int-Data")) {
+					Assert.assertEquals(columnName, "Integer");
+					Assert.assertEquals(dataType, "Integer");
+					Assert.assertEquals(nullable, 0);
+
+				}
+
+				if (columnName.equalsIgnoreCase("BigInt-Data")) {
+					Assert.assertEquals(columnName, "BigInt-Data");
+					Assert.assertEquals(dataType, "int8");
+					Assert.assertEquals(nullable, 0);
+
+				}
+				if (columnName.equalsIgnoreCase("Num-Data")) {
+					Assert.assertEquals(columnName, "Item");
+					Assert.assertEquals(dataType, "int8");
+					Assert.assertEquals(nullable, 0);
+
+				}
+				if (columnName.equalsIgnoreCase("JSON-Data")) {
+					Assert.assertEquals(columnName, "Item");
+					Assert.assertEquals(dataType, "int8");
+					Assert.assertEquals(nullable, 0);
+
+				}
+				if (columnName.equalsIgnoreCase("Qty-Data")) {
+					Assert.assertEquals(columnName, "Item");
+					Assert.assertEquals(dataType, "int8");
+					Assert.assertEquals(nullable, 0);
+
+				}
+				if (columnName.equalsIgnoreCase("Unit-Data")) {
+					Assert.assertEquals(columnName, "Item");
+					Assert.assertEquals(dataType, "int8");
+					Assert.assertEquals(nullable, 0);
+
+				}
+				if (columnName.equalsIgnoreCase("Std-Qty-Data")) {
+					Assert.assertEquals(columnName, "Item");
+					Assert.assertEquals(dataType, "int8");
+					Assert.assertEquals(nullable, 0);
+
+				}
+				if (columnName.equalsIgnoreCase("Foreign-Data")) {
+					Assert.assertEquals(columnName, "Item");
+					Assert.assertEquals(dataType, "int8");
+					Assert.assertEquals(nullable, 0);
+
+				}
+				if (columnName.equalsIgnoreCase("Unit-Data")) {
+					Assert.assertEquals(columnName, "Item");
+					Assert.assertEquals(dataType, "int8");
+					Assert.assertEquals(nullable, 0);
+
+				}
+
+				num++;
 				System.out.println();
 			}
-		} catch (SQLException e) {
+
+			System.out.println("Number of Columns are =>" + num);
+			Assert.assertEquals(num, 18);
+
+		}
+
+		catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
