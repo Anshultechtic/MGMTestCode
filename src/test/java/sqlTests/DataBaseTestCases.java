@@ -254,6 +254,28 @@ public class DataBaseTestCases extends SQLConnection {
 		}
 
 	}
+	
+	@Test
+	public void testItemCountTable() throws SQLException {
+		
+		Statement stat = connection.createStatement();
+		String name = null;
+		int count = 0;
+		String columnName = null;
+		ResultSet r = stat.executeQuery(
+				"SELECT * FROM public.\"t-Col\";");
+
+		while (r.next()) {
+
+			count++;
+
+		}
+		
+		System.out.println(count);
+		
+	}
+	
+	
 //
 //	@Test
 //	public void testColTable() {

@@ -2,29 +2,30 @@
 <testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-11-06T17:44:13 IST" name="Default suite" finished-at="2023-11-06T17:44:13 IST" duration-ms="147">
+  <suite started-at="2023-11-22T18:43:01 IST" name="Default suite" finished-at="2023-11-22T18:43:01 IST" duration-ms="112">
     <groups>
     </groups>
-    <test started-at="2023-11-06T17:44:13 IST" name="Default test" finished-at="2023-11-06T17:44:13 IST" duration-ms="147">
+    <test started-at="2023-11-22T18:43:01 IST" name="Default test" finished-at="2023-11-22T18:43:01 IST" duration-ms="112">
       <class name="sqlTests.DataBaseTestCases">
-        <test-method is-config="true" signature="sqlTest1()[pri:0, instance:sqlTests.DataBaseTestCases@268f106e]" started-at="2023-11-06T17:44:12 IST" name="sqlTest1" finished-at="2023-11-06T17:44:13 IST" duration-ms="515" status="PASS">
+        <test-method is-config="true" signature="sqlTest1()[pri:0, instance:sqlTests.DataBaseTestCases@6e9a5ed8]" started-at="2023-11-22T18:43:01 IST" name="sqlTest1" finished-at="2023-11-22T18:43:01 IST" duration-ms="393" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- sqlTest1 -->
-        <test-method signature="testFormaTable()[pri:0, instance:sqlTests.DataBaseTestCases@268f106e]" started-at="2023-11-06T17:44:13 IST" name="testFormaTable" finished-at="2023-11-06T17:44:13 IST" duration-ms="85" status="FAIL">
+        <test-method signature="testFormaTable()[pri:0, instance:sqlTests.DataBaseTestCases@6e9a5ed8]" started-at="2023-11-22T18:43:01 IST" name="testFormaTable" finished-at="2023-11-22T18:43:01 IST" duration-ms="65" status="FAIL">
           <exception class="java.lang.AssertionError">
             <message>
-              <![CDATA[expected [Item] but found [Bool-Data]]]>
+              <![CDATA[expected [1] but found [0]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [Item] but found [Bool-Data]
+              <![CDATA[java.lang.AssertionError: expected [1] but found [0]
 at org.testng.Assert.fail(Assert.java:111)
 at org.testng.Assert.failNotEquals(Assert.java:1578)
 at org.testng.Assert.assertEqualsImpl(Assert.java:150)
 at org.testng.Assert.assertEquals(Assert.java:132)
-at org.testng.Assert.assertEquals(Assert.java:656)
-at org.testng.Assert.assertEquals(Assert.java:666)
-at sqlTests.DataBaseTestCases.testFormaTable(DataBaseTestCases.java:118)
+at org.testng.Assert.assertEquals(Assert.java:1419)
+at org.testng.Assert.assertEquals(Assert.java:1383)
+at org.testng.Assert.assertEquals(Assert.java:1429)
+at sqlTests.DataBaseTestCases.testFormaTable(DataBaseTestCases.java:70)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -59,7 +60,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testFormaTable -->
-        <test-method is-config="true" signature="sqlTest2()[pri:0, instance:sqlTests.DataBaseTestCases@268f106e]" started-at="2023-11-06T17:44:13 IST" name="sqlTest2" finished-at="2023-11-06T17:44:13 IST" duration-ms="4" status="PASS">
+        <test-method is-config="true" signature="sqlTest2()[pri:0, instance:sqlTests.DataBaseTestCases@6e9a5ed8]" started-at="2023-11-22T18:43:01 IST" name="sqlTest2" finished-at="2023-11-22T18:43:01 IST" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- sqlTest2 -->
