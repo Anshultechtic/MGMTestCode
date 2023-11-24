@@ -26,7 +26,7 @@ public class SQLConnection {
 	public String password = "Anshul@123";
 	public String temp;
 	public int count;
-	public ArrayList<String> resultStatus = new ArrayList<>();
+	
 
 	public void launchSQLTests() {
 
@@ -43,24 +43,13 @@ public class SQLConnection {
 			System.out.println("Connected to PostgreSQL database successfully!");
 
 		} catch (SQLException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-//		System.out.println("Connected to PostgreSQL database successfully!");
+
 
 	}
 
-	public void Sample(ArrayList<String> temp) {
-
-		int i = 0;
-
-		for (String s : temp) {
-
-			i++;
-			System.out.println(i + " " + s);
-		}
-
-	}
+	
 
 	
 

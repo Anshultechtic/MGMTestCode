@@ -7,7 +7,7 @@ import org.testng.ITestResult;
 import baseTest.BaseClass;
 import baseTest.SQLConnection;
 
-public class ListenerSetUp extends SQLConnection implements ITestListener {
+public class ListenerSetUp extends BaseClass implements ITestListener {
 
 	BaseClass bc;
 
@@ -29,7 +29,7 @@ public class ListenerSetUp extends SQLConnection implements ITestListener {
 	@Override
 	public void onTestSkipped(ITestResult result) {
 		this.temp = result.getMethod().getMethodName();
-		resultStatus.add(this.temp);
+		resultStatus.add(this.temp +" is Skipped");
 
 	}
 
@@ -38,7 +38,7 @@ public class ListenerSetUp extends SQLConnection implements ITestListener {
 
 		this.temp = result.getMethod().getMethodName();
 		resultStatus.add(this.temp +" is failed");
-		Sample(resultStatus);
+		ResultStatuses(resultStatus);
 
 	}
 
@@ -53,7 +53,7 @@ public class ListenerSetUp extends SQLConnection implements ITestListener {
 		
 		
 		
-		Sample(resultStatus);
+		ResultStatuses(resultStatus);
 
 	}
 
