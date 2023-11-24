@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
+<testng-results ignored="0" total="3" passed="2" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-11-22T18:43:01 IST" name="Default suite" finished-at="2023-11-22T18:43:01 IST" duration-ms="112">
+  <suite started-at="2023-11-24T17:18:12 IST" name="Suite" finished-at="2023-11-24T17:18:12 IST" duration-ms="178">
     <groups>
     </groups>
-    <test started-at="2023-11-22T18:43:01 IST" name="Default test" finished-at="2023-11-22T18:43:01 IST" duration-ms="112">
+    <test started-at="2023-11-24T17:18:12 IST" name="Test" finished-at="2023-11-24T17:18:12 IST" duration-ms="178">
       <class name="sqlTests.DataBaseTestCases">
-        <test-method is-config="true" signature="sqlTest1()[pri:0, instance:sqlTests.DataBaseTestCases@6e9a5ed8]" started-at="2023-11-22T18:43:01 IST" name="sqlTest1" finished-at="2023-11-22T18:43:01 IST" duration-ms="393" status="PASS">
+        <test-method is-config="true" signature="sqlTest1()[pri:0, instance:sqlTests.DataBaseTestCases@5b247367]" started-at="2023-11-24T17:18:11 IST" name="sqlTest1" finished-at="2023-11-24T17:18:12 IST" duration-ms="447" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- sqlTest1 -->
-        <test-method signature="testFormaTable()[pri:0, instance:sqlTests.DataBaseTestCases@6e9a5ed8]" started-at="2023-11-22T18:43:01 IST" name="testFormaTable" finished-at="2023-11-22T18:43:01 IST" duration-ms="65" status="FAIL">
+        <test-method signature="testFormaTable()[pri:0, instance:sqlTests.DataBaseTestCases@5b247367]" started-at="2023-11-24T17:18:12 IST" name="testFormaTable" finished-at="2023-11-24T17:18:12 IST" duration-ms="74" status="FAIL">
           <exception class="java.lang.AssertionError">
             <message>
               <![CDATA[expected [1] but found [0]]]>
@@ -60,11 +60,19 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testFormaTable -->
-        <test-method is-config="true" signature="sqlTest2()[pri:0, instance:sqlTests.DataBaseTestCases@6e9a5ed8]" started-at="2023-11-22T18:43:01 IST" name="sqlTest2" finished-at="2023-11-22T18:43:01 IST" duration-ms="1" status="PASS">
+        <test-method signature="testItemCountTable()[pri:0, instance:sqlTests.DataBaseTestCases@5b247367]" started-at="2023-11-24T17:18:12 IST" name="testItemCountTable" finished-at="2023-11-24T17:18:12 IST" duration-ms="14" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testItemCountTable -->
+        <test-method signature="testRowTable()[pri:0, instance:sqlTests.DataBaseTestCases@5b247367]" started-at="2023-11-24T17:18:12 IST" name="testRowTable" finished-at="2023-11-24T17:18:12 IST" duration-ms="6" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testRowTable -->
+        <test-method is-config="true" signature="sqlTest2()[pri:0, instance:sqlTests.DataBaseTestCases@5b247367]" started-at="2023-11-24T17:18:12 IST" name="sqlTest2" finished-at="2023-11-24T17:18:12 IST" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- sqlTest2 -->
       </class> <!-- sqlTests.DataBaseTestCases -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
 </testng-results>

@@ -59,10 +59,10 @@ public class DataBaseTestCases extends SQLConnection {
 
 				}
 
-				System.out.println("Column Name: " + columnName);
-				System.out.println("Data Type: " + dataType);
-				System.out.println("Column Size: " + columnSize);
-				System.out.println("Nullable: " + (nullable == DatabaseMetaData.columnNullable ? "YES" : "NO"));
+//				System.out.println("Column Name: " + columnName);
+//				System.out.println("Data Type: " + dataType);
+//				System.out.println("Column Size: " + columnSize);
+//				System.out.println("Nullable: " + (nullable == DatabaseMetaData.columnNullable ? "YES" : "NO"));
 
 				if (columnName.equalsIgnoreCase("Cell")) {
 					Assert.assertEquals(columnName, "Cell");
@@ -209,7 +209,7 @@ public class DataBaseTestCases extends SQLConnection {
 
 	@Test
 	public void testRowTable() throws SQLException {
-
+	
 		ArrayList<String> list = new ArrayList<>();
 		ArrayList<Integer> dataTypeRowIDlist = new ArrayList<>();
 
@@ -230,34 +230,34 @@ public class DataBaseTestCases extends SQLConnection {
 
 		}
 
-		System.out.println(list.toString());
-
-		System.out.println(dataTypeRowIDlist.toString());
-
-		for (int i = 0; i < list.size(); i++) {
-
-			if (list.get(i).equals("TG Name") && dataTypeRowIDlist.get(i).equals(20000216)) {
-
-				System.out.println("Passed :- <" + list.get(i) + "> has the dataType " + dataTypeRowIDlist.get(i));
-			} else {
-				System.out.println("Failed :- <" + list.get(i) + "> don't have correct DataType");
-			}
-
-			if (list.get(i).equals("TG") && dataTypeRowIDlist.get(i).equals(20000247)) {
-
-				System.out.println("Passed :- <" + list.get(i) + "> has the dataType " + dataTypeRowIDlist.get(i));
-
-			} else {
-				System.out.println("Failed :- <" + list.get(i) + "> don't have correct DataType");
-			}
-
-		}
-
+//		System.out.println(list.toString());
+//
+//		System.out.println(dataTypeRowIDlist.toString());
+//
+//		for (int i = 0; i < list.size(); i++) {
+//
+//			if (list.get(i).equals("TG Name") && dataTypeRowIDlist.get(i).equals(20000216)) {
+//
+//				System.out.println("Passed :- <" + list.get(i) + "> has the dataType " + dataTypeRowIDlist.get(i));
+//			} else {
+//				System.out.println("Failed :- <" + list.get(i) + "> don't have correct DataType");
+//			}
+//
+//			if (list.get(i).equals("TG") && dataTypeRowIDlist.get(i).equals(20000247)) {
+//
+//				System.out.println("Passed :- <" + list.get(i) + "> has the dataType " + dataTypeRowIDlist.get(i));
+//
+//			} else {
+//				System.out.println("Failed :- <" + list.get(i) + "> don't have correct DataType");
+//			}
+//
+//		}
+//
 	}
 	
 	@Test
 	public void testItemCountTable() throws SQLException {
-		
+	
 		Statement stat = connection.createStatement();
 		String name = null;
 		int count = 0;
