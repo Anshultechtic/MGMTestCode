@@ -12,4 +12,5 @@
       <class name="sqlTests.DataBaseTestCases"/>
     </classes>
   </test> <!-- Test -->
+  
 </suite> <!-- Suite -->

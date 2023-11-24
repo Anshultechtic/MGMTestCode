@@ -2,16 +2,16 @@
 <testng-results ignored="0" total="3" passed="2" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-11-24T18:26:04 IST" name="Suite" finished-at="2023-11-24T18:26:04 IST" duration-ms="192">
+  <suite started-at="2023-11-24T19:00:46 IST" name="Suite" finished-at="2023-11-24T19:00:47 IST" duration-ms="168">
     <groups>
     </groups>
-    <test started-at="2023-11-24T18:26:04 IST" name="Test" finished-at="2023-11-24T18:26:04 IST" duration-ms="192">
+    <test started-at="2023-11-24T19:00:46 IST" name="Test" finished-at="2023-11-24T19:00:47 IST" duration-ms="168">
       <class name="sqlTests.DataBaseTestCases">
-        <test-method is-config="true" signature="sqlTest1()[pri:0, instance:sqlTests.DataBaseTestCases@5b247367]" started-at="2023-11-24T18:26:03 IST" name="sqlTest1" finished-at="2023-11-24T18:26:04 IST" duration-ms="704" status="PASS">
+        <test-method is-config="true" signature="sqlTest1()[pri:0, instance:sqlTests.DataBaseTestCases@294a6b8e]" started-at="2023-11-24T19:00:46 IST" name="sqlTest1" finished-at="2023-11-24T19:00:46 IST" duration-ms="326" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- sqlTest1 -->
-        <test-method signature="testFormaTable()[pri:0, instance:sqlTests.DataBaseTestCases@5b247367]" started-at="2023-11-24T18:26:04 IST" name="testFormaTable" finished-at="2023-11-24T18:26:04 IST" duration-ms="80" status="FAIL">
+        <test-method signature="testFormaTable()[pri:0, instance:sqlTests.DataBaseTestCases@294a6b8e]" started-at="2023-11-24T19:00:46 IST" name="testFormaTable" finished-at="2023-11-24T19:00:46 IST" duration-ms="69" status="FAIL">
           <exception class="java.lang.AssertionError">
             <message>
               <![CDATA[expected [1] but found [0]]]>
@@ -60,15 +60,15 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testFormaTable -->
-        <test-method signature="testItemCountTable()[pri:0, instance:sqlTests.DataBaseTestCases@5b247367]" started-at="2023-11-24T18:26:04 IST" name="testItemCountTable" finished-at="2023-11-24T18:26:04 IST" duration-ms="9" status="PASS">
+        <test-method signature="testItemCountTable()[pri:0, instance:sqlTests.DataBaseTestCases@294a6b8e]" started-at="2023-11-24T19:00:46 IST" name="testItemCountTable" finished-at="2023-11-24T19:00:46 IST" duration-ms="11" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testItemCountTable -->
-        <test-method signature="testRowTable()[pri:0, instance:sqlTests.DataBaseTestCases@5b247367]" started-at="2023-11-24T18:26:04 IST" name="testRowTable" finished-at="2023-11-24T18:26:04 IST" duration-ms="12" status="PASS">
+        <test-method signature="testRowTable()[pri:0, instance:sqlTests.DataBaseTestCases@294a6b8e]" started-at="2023-11-24T19:00:46 IST" name="testRowTable" finished-at="2023-11-24T19:00:47 IST" duration-ms="13" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testRowTable -->
-        <test-method is-config="true" signature="sqlTest2()[pri:0, instance:sqlTests.DataBaseTestCases@5b247367]" started-at="2023-11-24T18:26:04 IST" name="sqlTest2" finished-at="2023-11-24T18:26:04 IST" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="sqlTest2()[pri:0, instance:sqlTests.DataBaseTestCases@294a6b8e]" started-at="2023-11-24T19:00:47 IST" name="sqlTest2" finished-at="2023-11-24T19:00:47 IST" duration-ms="4" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- sqlTest2 -->

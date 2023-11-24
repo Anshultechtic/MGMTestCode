@@ -11,7 +11,7 @@ import com.aventstack.extentreports.reporter.configuration.Theme;
 
 public class ExtentReportCode {
 
-    public static ExtentReports main() {
+    public static ExtentReports ExtentReport() {
 
 	String extentPath = System.getProperty("user.dir")+"\\test-OutputFiles\\MGM_ExtentReport.html";
 		
