@@ -35,38 +35,11 @@ public class SQLConnection {
 		System.err.println("Failed to connect to the database.");
 	}
 
-	@BeforeSuite
-	public void sqlTest1() {
-
-		try {
-			connection = DriverManager.getConnection(url, user, password);
-			System.out.println("Connected to PostgreSQL database successfully!");
-
-		} catch (SQLException e) {
-			e.printStackTrace();
-		}
-
-
-	}
-
+	
 	
 
 	
 
-	@AfterSuite
-	public void sqlTest2() {
-
-		
-
-		System.out.println("==>Connection Closed<==");
-		try {
-			if (connection != null) {
-				connection.close();
-			}
-		} catch (SQLException e) {
-			e.printStackTrace();
-		}
-
-	}
+	
 
 }

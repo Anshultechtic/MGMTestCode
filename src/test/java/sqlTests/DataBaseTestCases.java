@@ -10,9 +10,10 @@ import java.util.ArrayList;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import baseTest.BaseClass;
 import baseTest.SQLConnection;
 
-public class DataBaseTestCases extends SQLConnection {
+public class DataBaseTestCases extends BaseClass {
 
 	@Test
 	public void testFormaTable() {
@@ -209,7 +210,7 @@ public class DataBaseTestCases extends SQLConnection {
 
 	@Test
 	public void testRowTable() throws SQLException {
-	
+	System.out.println("Hello TC 2");
 		ArrayList<String> list = new ArrayList<>();
 		ArrayList<Integer> dataTypeRowIDlist = new ArrayList<>();
 

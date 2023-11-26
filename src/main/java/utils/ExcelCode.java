@@ -2,6 +2,7 @@ package utils;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
 import java.util.Iterator;
 
 import org.apache.poi.ss.usermodel.Cell;
@@ -44,7 +45,7 @@ public class ExcelCode {
 					int num = 0;
 					while (rowIt.hasNext()) {
 						rowIt.next();
-                      
+
 						Row row = sh.getRow(rowNum1);
 
 						rowNum1++;
@@ -68,7 +69,7 @@ public class ExcelCode {
 
 						System.out.println(row.getCell(cellNum).getStringCellValue());
 						if (row.getCell(cellNum).getStringCellValue().isBlank()) {
-							
+
 							System.out.println("Field is Blank");
 							break;
 
@@ -91,7 +92,48 @@ public class ExcelCode {
 
 	}
 
-	public void writeData() {
+	public static void writeData(String TG) {
+
+		String path = System.getProperty("user.dir") + "\\src\\test\\resources\\resources\\Book14.xlsx";
+
+		FileInputStream fis;
+		XSSFWorkbook wb = null;
+		try {
+			fis = new FileInputStream(path);
+
+			wb = new XSSFWorkbook(fis);
+
+			XSSFSheet sh = wb.getSheetAt(0);
+
+			Row firstRow = sh.getRow(0);
+			int noOfrows = sh.getPhysicalNumberOfRows();
+			int noOfCells = firstRow.getLastCellNum();
+			System.out.println("Before for");
+			for (int i = 0; i < noOfCells; i++) {
+				System.out.println("After for");
+				String cellName = firstRow.getCell(i).getStringCellValue();
+				System.out.println(cellName);
+				if (cellName.equalsIgnoreCase("Row")) {
+					System.out.println("Inside if " + noOfrows);
+					for (int j = 0; j < noOfrows; j++) {
+						System.out.println("Inside if for");
+						sh.getRow(j).createCell(i).setCellValue(TG);
+						FileOutputStream fos = new FileOutputStream(path);
+						System.out.println("Beforedone");
+						wb.write(fos);
+						System.out.println("Afterdone");
+						noOfrows++;
+
+					}
+
+				}
+
+			}
+
+		} catch (Exception e) {
+
+			e.printStackTrace();
+		}
 
 	}
 

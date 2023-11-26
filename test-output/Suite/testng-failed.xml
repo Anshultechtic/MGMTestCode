@@ -8,9 +8,11 @@
     <classes>
       <class name="sqlTests.DataBaseTestCases">
         <methods>
-          <include name="sqlTest1"/>
+          <include name="end"/>
+          <include name="start"/>
           <include name="testFormaTable"/>
           <include name="sqlTest2"/>
+          <include name="sqlTest1"/>
         </methods>
       </class> <!-- sqlTests.DataBaseTestCases -->
     </classes>
