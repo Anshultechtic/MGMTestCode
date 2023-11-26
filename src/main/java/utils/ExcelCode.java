@@ -115,7 +115,7 @@ public class ExcelCode {
 				System.out.println(cellName);
 				if (cellName.equalsIgnoreCase("Row")) {
 					System.out.println("Inside if " + noOfrows);
-					for (int j = 0; j < noOfrows; j++) {
+					for (int j = 1; j <= noOfrows; j++) {
 						System.out.println("Inside if for");
 						sh.getRow(j).createCell(i).setCellValue(TG);
 						FileOutputStream fos = new FileOutputStream(path);

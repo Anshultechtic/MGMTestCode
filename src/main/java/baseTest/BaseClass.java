@@ -33,6 +33,7 @@ public class BaseClass {
 	public SQLConnection sql;
 	public Connection connection = null;
 	public String url = "jdbc:postgresql://localhost:5432/AIC";
+	public String url2 = "jdbc:postgresql://localhost:5432/TestCaseDetails";
 	public String user = "postgres";
 	public String password = "Anshul@123";
 
@@ -48,7 +49,7 @@ public class BaseClass {
 	public void sqlTest1() {
 
 		try {
-			connection = DriverManager.getConnection(url, user, password);
+			connection = DriverManager.getConnection(url2, user, password);
 			System.out.println("Connected to PostgreSQL database successfully!");
 
 		} catch (SQLException e) {
