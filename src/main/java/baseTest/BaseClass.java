@@ -33,9 +33,9 @@ public class BaseClass {
 	public SQLConnection sql;
 	public Connection connection = null;
 	public String url = "jdbc:postgresql://localhost:5432/AIC";
-	public String url2 = "jdbc:postgresql://localhost:5432/TestCaseDetails";
+	public String url2 = "jdbc:postgresql://localhost:5432/AIC";
 	public String user = "postgres";
-	public String password = "Anshul@123";
+	public String password = "postgres";
 
 	public void launchSQLTests() {
 
