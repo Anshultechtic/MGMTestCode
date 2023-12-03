@@ -13,7 +13,7 @@
 	</listeners>
 	<test thread-count="5" name="Test">
 		<classes>
-			<class name="sqlTests.DBTestCases" />
+			<class name="sqlTests.DBTest"/>
 		</classes>
 	</test> <!-- Test -->
 

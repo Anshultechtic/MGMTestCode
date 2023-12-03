@@ -3,15 +3,15 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="sqlTests.DBTestCases">
+      <class name="sqlTests.DBTests">
         <methods>
-          <include name="start"/>
           <include name="end"/>
+          <include name="start"/>
+          <include name="getItem"/>
           <include name="sqlTest2"/>
           <include name="sqlTest1"/>
-          <include name="testRowTable"/>
         </methods>
-      </class> <!-- sqlTests.DBTestCases -->
+      </class> <!-- sqlTests.DBTests -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
