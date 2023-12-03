@@ -1,45 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-12-03T14:48:30 IST" name="Suite" finished-at="2023-12-03T14:48:30 IST" duration-ms="368">
+  <suite started-at="2023-12-03T23:42:17 IST" name="Default suite" finished-at="2023-12-03T23:42:17 IST" duration-ms="441">
     <groups>
     </groups>
-    <test started-at="2023-12-03T14:48:30 IST" name="Test" finished-at="2023-12-03T14:48:30 IST" duration-ms="368">
+    <test started-at="2023-12-03T23:42:17 IST" name="Default test" finished-at="2023-12-03T23:42:17 IST" duration-ms="441">
       <class name="sqlTests.DBTest">
-        <test-method is-config="true" signature="sqlTest1()[pri:0, instance:sqlTests.DBTest@19b89d4]" started-at="2023-12-03T14:48:29 IST" name="sqlTest1" finished-at="2023-12-03T14:48:30 IST" duration-ms="594" status="PASS">
+        <test-method is-config="true" signature="sqlTest1()[pri:0, instance:sqlTests.DBTest@6ad82709]" started-at="2023-12-03T23:42:16 IST" name="sqlTest1" finished-at="2023-12-03T23:42:17 IST" duration-ms="671" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- sqlTest1 -->
-        <test-method is-config="true" signature="start()[pri:0, instance:sqlTests.DBTest@19b89d4]" started-at="2023-12-03T14:48:30 IST" name="start" finished-at="2023-12-03T14:48:30 IST" duration-ms="111" status="PASS">
+        <test-method is-config="true" signature="start()[pri:0, instance:sqlTests.DBTest@6ad82709]" started-at="2023-12-03T23:42:17 IST" name="start" finished-at="2023-12-03T23:42:17 IST" duration-ms="227" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- start -->
-        <test-method signature="getCellIDByITemName()[pri:0, instance:sqlTests.DBTest@19b89d4]" started-at="2023-12-03T14:48:30 IST" name="getCellIDByITemName" finished-at="2023-12-03T14:48:30 IST" duration-ms="82" status="PASS">
+        <test-method signature="getCellIDByITemName()[pri:0, instance:sqlTests.DBTest@6ad82709]" started-at="2023-12-03T23:42:17 IST" name="getCellIDByITemName" finished-at="2023-12-03T23:42:17 IST" duration-ms="81" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getCellIDByITemName -->
-        <test-method signature="getRowIDByITemName()[pri:0, instance:sqlTests.DBTest@19b89d4]" started-at="2023-12-03T14:48:30 IST" name="getRowIDByITemName" finished-at="2023-12-03T14:48:30 IST" duration-ms="20" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- getRowIDByITemName -->
-        <test-method signature="getRowIDByITemNameTest()[pri:0, instance:sqlTests.DBTest@19b89d4]" started-at="2023-12-03T14:48:30 IST" name="getRowIDByITemNameTest" finished-at="2023-12-03T14:48:30 IST" duration-ms="15" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- getRowIDByITemNameTest -->
-        <test-method signature="getnumberOfItemByCellID()[pri:0, instance:sqlTests.DBTest@19b89d4]" started-at="2023-12-03T14:48:30 IST" name="getnumberOfItemByCellID" finished-at="2023-12-03T14:48:30 IST" duration-ms="11" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- getnumberOfItemByCellID -->
-        <test-method is-config="true" signature="end()[pri:0, instance:sqlTests.DBTest@19b89d4]" started-at="2023-12-03T14:48:30 IST" name="end" finished-at="2023-12-03T14:48:30 IST" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="end()[pri:0, instance:sqlTests.DBTest@6ad82709]" started-at="2023-12-03T23:42:17 IST" name="end" finished-at="2023-12-03T23:42:17 IST" duration-ms="2" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- end -->
-        <test-method is-config="true" signature="sqlTest2()[pri:0, instance:sqlTests.DBTest@19b89d4]" started-at="2023-12-03T14:48:31 IST" name="sqlTest2" finished-at="2023-12-03T14:48:31 IST" duration-ms="2" status="PASS">
+        <test-method is-config="true" signature="sqlTest2()[pri:0, instance:sqlTests.DBTest@6ad82709]" started-at="2023-12-03T23:42:17 IST" name="sqlTest2" finished-at="2023-12-03T23:42:17 IST" duration-ms="2" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- sqlTest2 -->
       </class> <!-- sqlTests.DBTest -->
-    </test> <!-- Test -->
-  </suite> <!-- Suite -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>

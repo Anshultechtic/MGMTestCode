@@ -25,7 +25,7 @@ public class DBTest extends DBMethods {
 	@Test
 	public void getCellIDByITemName() throws SQLException {
 
-		getItemNameByRowIDAndColID(20000001, 30000002);
+		getItemNameByRowIDAndColID(20000004, 30000002);
 
 	}
 
