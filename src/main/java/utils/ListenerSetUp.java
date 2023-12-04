@@ -30,6 +30,7 @@ public class ListenerSetUp extends BaseClass implements ITestListener {
 	public void onTestSuccess(ITestResult result) {
 
 		extentTest.get().log(Status.PASS, "Test Passed");
+		logger.info("test Finished");
 
 	}
 
@@ -57,6 +58,7 @@ public class ListenerSetUp extends BaseClass implements ITestListener {
 			logger.info("test Failed ..Took ScreenShot");
 		}
 
+		logger.info("test Failed and Finished");
 	}
 
 	@Override

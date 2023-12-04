@@ -35,8 +35,8 @@ public class BaseClass {
 	public String url = "jdbc:postgresql://localhost:5432/AIC";
 	public String url2 = "jdbc:postgresql://localhost:5432/AIC";
 	public String user = "postgres";
-//	public String password = "postgres";
-	public String password = "Anshul@123";
+	public String password = "postgres";
+//	public String password = "Anshul@123";
 	
 	
 
