@@ -10,6 +10,7 @@ import baseTest.BaseClass;
 public class DBMethods extends BaseClass {
 
 	private String colID;
+	public int countOfRows = 0;
 
 	public void testRowTable(long rowID, long ColID) throws SQLException {
 		System.out.println("Hello TC 2");
@@ -162,39 +163,66 @@ public class DBMethods extends BaseClass {
 		try {
 			stat = connection.createStatement();
 			String cellID = null;
-		
+
 			ResultSet r = stat
-					.executeQuery("SELECT\r\n"
-							+ "   \"t-Data\".\"JSON-Data\"->> '20000174' as \"NameOfItem\", \r\n"
-							+ "   \"t-Cell\".\"Cell\" as \"Cell\"\r\n"
-							+ "	FROM \"public\".\"t-Item\"\r\n"
+					.executeQuery("SELECT\r\n" + "   \"t-Data\".\"JSON-Data\"->> '20000174' as \"NameOfItem\", \r\n"
+							+ "   \"t-Cell\".\"Cell\" as \"Cell\"\r\n" + "	FROM \"public\".\"t-Item\"\r\n"
 							+ "	join \"t-Cell\" on \"t-Cell\".\"Cell\" = \"t-Item\".\"Cell\"\r\n"
 							+ "	join \"t-Col\" on \"t-Cell\".\"Col\" = \"t-Col\".\"Col\"\r\n"
 							+ "	join \"t-Row\" on \"t-Cell\".\"Row\"= \"t-Row\".\"Row\"\r\n"
 							+ "	join \"t-Data\" on \"t-Data\".\"Data\" = \"t-Item\".\"Data\"\r\n"
-							+ "	where \"t-Row\".\"Row\" = " + rowID + 
-							   " and \"t-Col\".\"Col\" = " + ColID + " ;");
+							+ "	where \"t-Row\".\"Row\" = " + rowID + " and \"t-Col\".\"Col\" = " + ColID + " ;");
 
 			while (r.next()) {
-				
+
 				cellID = r.getString("Cell");
-				System.out.println( "Cell ID is "+cellID);
+				System.out.println("Cell ID is " + cellID);
 				count++;
-				
 
 			}
-			System.out.println("Number of Item in the Cell =" +count);
-			
+			System.out.println("Number of Item in the Cell =" + count);
+
 		} catch (Exception e) {
 
 			e.printStackTrace();
 		}
-		
-		
+
 	}
 
-	public void getItemNameByCelID(long rowID, long ColID) {
+	public long getNoOfRowsInTG(long TGID, long Row) {
 
+		Statement stat1;
+		Statement stat2;
+		int count = 0;
+		String noOfRows = null;
+		try {
+			stat1 = connection.createStatement();
+			String colID = null;
+
+			ResultSet r = stat1.executeQuery("Select \"t-Row\".* ,\"t-Col\".\"Col-Name\" ,\"t-Col\".\"Col\"\r\n"
+					+ "from \"t-Row\" join \"t-Col\" on \"t-Col\".\"TG\" = \"t-Row\".\"TG\" \r\n"
+					+ "where \"t-Row\".\"TG\" =" + TGID + " and \"t-Row\".\"Row\" =" + Row + " \r\n"
+					+ "order by \"Row\"");
+			stat2 = connection.createStatement();
+
+			while (r.next()) {
+//				System.out.println(Row+"\n");
+
+				colID = r.getString("Col");
+//				System.out.println("Col ID is " + colID);
+				count++;
+
+			}
+
+		}
+
+		catch (Exception e) {
+
+			e.printStackTrace();
+		}
+
+		System.out.println("Number of Rows in the t-Row for " + Row + "= " + count);
+		return count;
 	}
 
 	public void getRowID_CelID_ItemID_ItemName(long rowID, long ColID) {
